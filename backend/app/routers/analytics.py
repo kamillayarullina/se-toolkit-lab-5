@@ -1,7 +1,7 @@
 """Router for analytics endpoints.
 
 Each endpoint performs SQL aggregation queries on the interaction data
-populated by the ETL pipeline. All endpoints require a `lab` query
+populated by the ETL pipeline. All endpoints require a lab query
 parameter to filter results by lab (e.g., "lab-01").
 """
 
@@ -19,8 +19,6 @@ async def get_scores(
     session: AsyncSession = Depends(get_session),
 ):
     """Score distribution histogram for a given lab.
-
-
 
     TODO: Implement this endpoint.
     - Find the lab item by matching title (e.g. "lab-04" → title contains "Lab 04")
